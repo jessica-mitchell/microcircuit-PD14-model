@@ -11,13 +11,13 @@ build:
     build:
       pdf:
         - echo "building pdf $READTHEDOCS_OUTPUT"
-        - mkdir -p $READTHEDOCS_OUTPUT/pdf
-        - cp docs/github_modeldescription.tex $READTHEDOCS_OUTPUT/pdf/
+          #- mkdir -p $READTHEDOCS_OUTPUT/pdf
+          #- cp docs/github_modeldescription.tex $READTHEDOCS_OUTPUT/pdf/
           #- cd _readthedocs/pdf
-        - echo "$PWD"
-        - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "$READTHEDOCS_OUTPUT/pdf/github_modeldescription.tex"
-        - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "$READTHEDOCS_OUTPUT/pdf/github_modeldescription.tex"
-        - cp $READTHEDOCS_OUTPUT/microcircuit-pd14-model.pdf $READTHEDOCS_OUTPUT/html/_static/
+        - ls
+        - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "docs/github_modeldescription.tex"
+        - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "docs/github_modeldescription.tex"
+        - cp microcircuit-pd14-model.pdf _readthedocs/html/_static/
         - ls _readthedocs/html/_static
 sphinx:
   builder: html
