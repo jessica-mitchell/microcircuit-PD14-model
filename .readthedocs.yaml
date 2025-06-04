@@ -14,12 +14,11 @@ build:
         - mkdir -p $READTHEDOCS_OUTPUT/pdf
         - cp docs/github_modeldescription.tex $READTHEDOCS_OUTPUT/pdf/
           #- cd _readthedocs/pdf
-        - ls _readthedocs/  #
         - echo "$PWD"
         - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "$READTHEDOCS_OUTPUT/pdf/github_modeldescription.tex"
-          #- latex docs/github_modeldescription.tex -output-format='pdf' -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
-          #- latex docs/github_modeldescription.tex -output-format='pdf' -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
-        - ls $READTHEDOCS_OUTPUT/pdf
+        - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "$READTHEDOCS_OUTPUT/pdf/github_modeldescription.tex"
+        - ls
+        - ls _readthedocs/
 sphinx:
   builder: html
   configuration: docs/conf.py
