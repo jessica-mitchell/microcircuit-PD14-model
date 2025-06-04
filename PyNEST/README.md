@@ -42,12 +42,11 @@ After installation, the `microcircuit` python package can be imported in a pytho
 ```python
 import microcircuit
 ```
+See [this example](#examples) for a more detailed illustration of how the package can be used.
 
-See [this example](examples/run_microcircuit.py) for a more detailed illustration of how the package can be used.
-  
 ## Software requirements
 
-- NEST ([NEST installation](https://nest-simulator.readthedocs.io/en/stable/installation))
+- NEST ([NEST installation](inv:nest:std:doc#installation/index))
 - Python 3.x
 
 - docopt-ng, matplotlib, numpy, psutil, ruamel.yaml (handled by python package dependencies)
@@ -61,16 +60,24 @@ See [this example](examples/run_microcircuit.py) for a more detailed illustratio
 | 0.5                                       | 4400 MB   |
 | 1                                         |   14 GB   |
 
+
+By default, the variables ``N_scaling`` and ``K_scaling`` in ``network_params.py`` are set to
+0.1`, which is a good choice for running the microcircuit on a local machine.
+N_scaling`` adjusts the number of neurons and ``K_scaling`` adjusts the indegrees.
+The full network can be run by setting these values to `1`.
+If this is done, the option to print the time progress should be switched off: ``'print_time': False`` in ``sim_params.py``.
+
 ## Performance benchmarking
 Recent performance benchmarking results for the microcircuit model can be found [here](https://nest-simulator.org/documentation/benchmark_results.html).
 
 ## Implementation details
 
-This implementation uses the [`iaf_psc_exp`](https://nest-simulator.org/documentation/models/iaf_psc_exp.html) neuron and the [`static_synapse`](https://nest-simulator.org/documentation/models/static_synapse.html) synapse models provided in [NEST]. 
-The network is connected according to the [`fixed_total_number`](https://nest-simulator.org/documentation/synapses/connectivity_concepts.html#random-fixed-total-number) connection rule in NEST. 
+This implementation uses the [`iaf_psc_exp`](inv:nest:std:doc#models/iaf_psc_exp) neuron and the [`static_synapse`](https://nest-simulator.org/documentation/models/static_synapse.html) synapse models provided in [NEST]. 
+The network is connected according to the [`fixed_total_number`](inv:nest:std:label#fixed_total_number)
+(https://nest-simulator.org/documentation/synapses/connectivity_concepts.html#random-fixed-total-number) connection rule in NEST. 
 The neuron dynamics is integrated in a time-driven manner using exact integration with a simulation step size `sim_resolution` [(Rotter & Diesmann, 1999)][1].
 
-The PyNEST implementation runs with [NEST 3.6](https://github.com/nest/nest-simulator.git) [(Villamar et al., 2023)][2].
+The PyNEST implementation runs with [NEST 3.6](https://github.com/nest/nest-simulator/tree/v3.6) [(Villamar et al., 2023)][2].
 
 ### Simulation parameters (defaults)
 
@@ -80,6 +87,7 @@ The PyNEST implementation runs with [NEST 3.6](https://github.com/nest/nest-simu
 | `t_presim`       | 500 ms           | duration of pre-simulation phase (warm-up)                   |
 | `t_sim`          | 1000 ms          | duration of simulation phase                                 |
 | `rec_dev`        | `spike_recorder` | recording device                                             |
+
 
 ## References
 
