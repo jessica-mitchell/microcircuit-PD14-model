@@ -12,6 +12,7 @@ build:
       pdf:
         - echo "building pdf $READTHEDOCS_OUTPUT"
         - echo "$PWD"
+        - ls
           #- cp ./gihtub_modeldescription.tex $READTHEDOCS_OUTPUT/pdf/
           #- make latexpdf  #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
 sphinx:
