@@ -15,7 +15,8 @@ build:
         - mkdir -p $READTHEDOCS_OUTPUT/pdf
           #- cp docs/github_modeldescription.tex $READTHEDOCS_OUTPUT/pdf/
           #
-        - latex docs/github_modeldescription.tex  -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
+        - latex docs/github_modeldescription.tex -output-format='pdf' -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
+        - latex docs/github_modeldescription.tex -output-format='pdf' -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
 sphinx:
   builder: html
   configuration: docs/conf.py
