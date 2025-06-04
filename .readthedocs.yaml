@@ -11,7 +11,7 @@ build:
   jobs:
     build:
       pdf:
-        - echo "building pdf"
+        - echo "building pdf $READTHEDOCS_OUTPUT"
         - mkdir -p $READTHEDOCS_OUTPUT/pdf/
         - echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
 sphinx:
