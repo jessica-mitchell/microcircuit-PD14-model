@@ -14,7 +14,7 @@ build:
         - mkdir -p $READTHEDOCS_OUTPUT/pdf
         - cp docs/github_modeldescription.tex $READTHEDOCS_OUTPUT/pdf/
         - cd $READTHEDOCS_OUTPUT/pdf/
-          #
+        - ls  #
         - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "github_modeldescription.tex"
           #- latex docs/github_modeldescription.tex -output-format='pdf' -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
           #- latex docs/github_modeldescription.tex -output-format='pdf' -output-directory=$READTHEDOCS_OUTPUT/pdf/ #- echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
