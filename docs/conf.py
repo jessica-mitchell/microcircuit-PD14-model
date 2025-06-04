@@ -19,14 +19,13 @@ sys.path.insert(0, str(Path('..', 'PyNEST/src').resolve()))
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
+extensions = ["myst_parser",
               #"sphinx_gallery.gen_gallery",
               "sphinx_design",
               "sphinx.ext.mathjax",
               "sphinx.ext.autodoc",
               "sphinx.ext.intersphinx"]
 
-autodoc_mock_imports = ["nest", "numpy", "docopt", "matplotlib"]
 
 templates_path = ['_templates']
 exclude_patterns = []
