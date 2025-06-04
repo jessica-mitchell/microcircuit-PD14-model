@@ -1,9 +1,19 @@
 version: 2
 
+formats:
+  - pdf
+
 build:
   os: ubuntu-24.04
   tools:
     python: "3.12"
+
+  jobs:
+    build:
+      pdf:
+        - echo "building pdf"
+        - mkdir -p $READTHEDOCS_OUTPUT/pdf/
+        - echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
 sphinx:
   builder: html
   configuration: docs/conf.py
@@ -14,13 +24,5 @@ python:
        path: PyNEST/
        extra_requirements:
          - doc
-formats:
-  - pdf
 
 
-jobs:
-  build:
-    pdf:
-      - echo "building pdf"
-      - mkdir -p $READTHEDOCS_OUTPUT/pdf/
-      - echo "hello world" > $READTHEDOCS_OUTPUT/pdf/index.pdf
