@@ -90,6 +90,8 @@ doc = [
     "sphinx",
     "sphinx-autodoc-typehints",
     "pygments",
+    "sphinx-design",
+    "sphinx-material",
     "recommonmark",
 ]
 
