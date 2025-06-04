@@ -17,8 +17,7 @@ build:
         - echo "$PWD"
         - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "$READTHEDOCS_OUTPUT/pdf/github_modeldescription.tex"
         - pdflatex -interaction=nonstopmode -recorder --jobname="microcircuit-pd14-model"  "$READTHEDOCS_OUTPUT/pdf/github_modeldescription.tex"
-        - ls
-        - ls _readthedocs/
+        - ls _readthedocs/html/
 sphinx:
   builder: html
   configuration: docs/conf.py
