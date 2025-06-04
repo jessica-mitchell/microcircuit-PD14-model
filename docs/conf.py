@@ -19,7 +19,7 @@ sys.path.insert(0, str(Path('..', 'PyNEST/src').resolve()))
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser",
+extensions = [
               #"sphinx_gallery.gen_gallery",
               "sphinx_design",
               "sphinx.ext.mathjax",
