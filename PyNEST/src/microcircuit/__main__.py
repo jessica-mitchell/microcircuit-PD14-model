@@ -24,7 +24,8 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 
 '''
-PyNEST implementation of the cortical microcircuit model of Potjans & Diesmann (2014).
+PyNEST implementation of the cortical microcircuit model of Potjans & Diesmann (2014)
+-------------------------------------------------------------------------------------
 
 Usage: microcircuit [options] run
        microcircuit [options] config
@@ -106,7 +107,7 @@ def run_example():
         + "  Time to simulate:    {:.3f} s\n".format(time_simulate - time_presimulate)
         + "  Time to evaluate:    {:.3f} s\n".format(time_evaluate - time_simulate)
     )
-    
+
 def main():
     'Start main CLI entry point.'
     args = docopt(__doc__)
@@ -116,9 +117,9 @@ def main():
 
     #log.info("Hello World")
 
-    if args['run']:        
+    if args['run']:
         run_example()
-        
+
     if args['config']:
 
         print()
@@ -129,7 +130,7 @@ def main():
         print()
         print("Simulation parameters:")
         print("----------------------")
-        pprint.pprint(sim_dict)                
+        pprint.pprint(sim_dict)
         print()
 if __name__ == '__main__':
     main()

@@ -92,7 +92,7 @@ doc = [
     "pygments",
     "sphinx-design",
     "sphinx-material",
-    "myst-parser",
+    "m2r2",
     "recommonmark",
 ]
 
