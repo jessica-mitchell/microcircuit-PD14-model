@@ -19,8 +19,9 @@ sys.path.insert(0, str(Path('..', 'PyNEST/src').resolve()))
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser",
-              #"sphinx_gallery.gen_gallery",
+extensions = [#"myst_parser",
+              "m2r2",
+              "sphinx_gallery.gen_gallery",
               "sphinx_design",
               "sphinx.ext.mathjax",
               "sphinx.ext.autodoc",
@@ -29,12 +30,13 @@ extensions = ["myst_parser",
 
 templates_path = ['_templates']
 exclude_patterns = []
+source_suffix = [".rst", ".md"]
 
-#sphinx_gallery_conf = {
-#     "examples_dirs": "../PyNEST/examples",   # path to your example scripts
-#     "gallery_dirs": "auto_examples",  # path to where to save gallery generated output
-#     "plot_gallery": "False",
-#}
+sphinx_gallery_conf = {
+     "examples_dirs": "../PyNEST/examples",   # path to your example scripts
+     "gallery_dirs": "auto_examples",  # path to where to save gallery generated output
+     "plot_gallery": "False",
+}
 
 intersphinx_mapping = {
     "python": ("https://docs.python.org/3", None),

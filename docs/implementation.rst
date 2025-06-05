@@ -1,7 +1,6 @@
-PyNEST implementation of the cortical microcircuit model
-========================================================
 
 
-.. include:: ../PyNEST/README.md
-   :parser: myst_parser.sphinx_
+.. mdinclude:: ../PyNEST/README.md
+
+
 

@@ -1,7 +1,7 @@
-# PyNEST implementation of the cortical microcircuit model 
+# PyNEST implementation of the cortical microcircuit model
 
-[![www.python.org](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org) 
-<a href="http://www.nest-simulator.org"> <img src="https://github.com/nest/nest-simulator/blob/master/doc/logos/nest-simulated.png" alt="NEST simulated" width="50"/></a> 
+[![www.python.org](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org)
+<a href="http://www.nest-simulator.org"> <img src="https://github.com/nest/nest-simulator/blob/master/doc/logos/nest-simulated.png" alt="NEST simulated" width="50"/></a>
 
 ## Installing the python package `microcircuit`
 
@@ -12,13 +12,16 @@ The PyNEST implementation of the model is provided in the form of a python packa
 
 We recommend installing the python package inside a python environment:
 - Create a python environment
-  ```bash
-  python -m venv venv
-  ```
+
+```bash
+python -m venv venv
+```
+
 - Activate the python environment:
-  ```
-  source venv/bin/activate
-  ```
+
+```bash
+source venv/bin/activate
+```
 - Note: NEST needs to be installed locally in the virtual envirionment (see software requirements)
 
 The `microcircuit` python package can be installed using:
@@ -42,11 +45,11 @@ After installation, the `microcircuit` python package can be imported in a pytho
 ```python
 import microcircuit
 ```
-See [this example](#examples) for a more detailed illustration of how the package can be used.
+See [this example](https://microcircuit-pd14-model.readthedocs.io/en/latest/auto_examples/run_microcircuit.html) for a more detailed illustration of how the package can be used.
 
 ## Software requirements
 
-- NEST ([NEST installation](inv:nest:std:doc#installation/index))
+- NEST ([NEST installation](https://nest-simulator.readthedocs.io/en/stable/installation/index.html))
 - Python 3.x
 
 - docopt-ng, matplotlib, numpy, psutil, ruamel.yaml (handled by python package dependencies)
@@ -72,9 +75,9 @@ Recent performance benchmarking results for the microcircuit model can be found 
 
 ## Implementation details
 
-This implementation uses the [`iaf_psc_exp`](inv:nest:std:doc#models/iaf_psc_exp) neuron and the [`static_synapse`](https://nest-simulator.org/documentation/models/static_synapse.html) synapse models provided in [NEST]. 
-The network is connected according to the [`fixed_total_number`](inv:nest:std:label#fixed_total_number)
-(https://nest-simulator.org/documentation/synapses/connectivity_concepts.html#random-fixed-total-number) connection rule in NEST. 
+This implementation uses the [iaf_psc_exp](https://nest-simulator.org/documentation/models/iaf_psc_exp.html) neuron and the [static_synapse](https://nest-simulator.org/documentation/models/static_synapse.html) synapse models provided in [NEST].
+The network is connected according to the [fixed_total_number](https://nest-simulator.org/documentation/synapses/connectivity_concepts.html#random-fixed-total-number)
+connection rule in NEST.
 The neuron dynamics is integrated in a time-driven manner using exact integration with a simulation step size `sim_resolution` [(Rotter & Diesmann, 1999)][1].
 
 The PyNEST implementation runs with [NEST 3.6](https://github.com/nest/nest-simulator/tree/v3.6) [(Villamar et al., 2023)][2].
