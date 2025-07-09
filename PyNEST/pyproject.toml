@@ -90,10 +90,11 @@ doc = [
     "sphinx",
     "sphinx-autodoc-typehints",
     "pygments",
+    "myst-parser",
     "sphinx-design",
     "sphinx-material",
     "sphinx-gallery",
-    "m2r2",
+    "sphinxcontrib-bibtex",
     "recommonmark",
 ]
 
