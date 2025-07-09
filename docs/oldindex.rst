@@ -45,7 +45,7 @@ The GitHub repository for this model can be found here: `microcircuit-pd14-model
         and the Neural Network Simulation Software NEST for a Full-Scale Cortical Microcircuit Model.
         Front. Neurosci. 12:291. DOI: `10.3389/fnins.2018.00291 <https://doi.org/10.3389/fnins.2018.00291>`__.
 
-For a list of publications that use or cite the microcircuit model see the `bibliography file <https://github.com/INM-6/microcircuit-PD14-model/blob/main/publications.bib>`_
+For a list of publications that use or cite the microcircuit model see the `bibliography file <https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs/publications/publications.bib>`_
 
 .. toctree::
    :maxdepth: 1

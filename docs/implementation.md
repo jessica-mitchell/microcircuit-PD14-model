@@ -1,6 +1,2 @@
 
-
 .. mdinclude:: ../PyNEST/README.md
-
-
-
