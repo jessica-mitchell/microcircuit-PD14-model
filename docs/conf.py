@@ -19,19 +19,23 @@ sys.path.insert(0, str(Path('..', 'PyNEST/src').resolve()))
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [#"myst_parser",
-              "m2r2",
+extensions = ["myst_parser",
+              #"m2r2",
               "sphinx_gallery.gen_gallery",
               "sphinx_design",
               "sphinx.ext.mathjax",
               "sphinx.ext.autodoc",
+              "sphinxcontrib.bibtex",
               "sphinx.ext.intersphinx"]
 
 
 templates_path = ['_templates']
 exclude_patterns = []
 source_suffix = [".rst", ".md"]
-
+myst_enable_extensions = ["colon_fence"]
+bibtex_bibfiles = ["publications/publications.bib"]
+bibtex_reference_style="author_year"
+bibtex_default_style="plain"
 sphinx_gallery_conf = {
      "examples_dirs": "../PyNEST/examples",   # path to your example scripts
      "gallery_dirs": "auto_examples",  # path to where to save gallery generated output

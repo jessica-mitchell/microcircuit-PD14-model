@@ -37,9 +37,9 @@ A detailed mathematical, implementation agnostic description of the model and it
 
 |  |  |
 |--|--|
-| [docs](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs) | documentation|
-| &ensp;[docs/model_description](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs/model_description) | model description (implementation agnostic) |
-|      [docs/benchmarking](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs/benchmarking) | performance benchmarking |
+| [`docs`](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs) | documentation|
+| &emsp;[`docs/model_description`](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs/model_description) | model description (implementation agnostic) |
+| &emsp;[`docs/benchmarking`](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs/benchmarking) | performance benchmarking |
 | &emsp;[`docs/publications`](https://github.com/INM-6/microcircuit-PD14-model/blob/main/docs/publications) | publications citing/using the microcircuit model|
 | [`PyNEST`](https://github.com/INM-6/microcircuit-PD14-model/blob/main/PyNEST) | PyNEST implementation (python package)|
 | &emsp;[`PyNEST/src/microcircuit`](https://github.com/INM-6/microcircuit-PD14-model/blob/main/PyNEST/src/microcircuit) | source code |

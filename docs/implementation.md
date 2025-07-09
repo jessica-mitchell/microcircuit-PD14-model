@@ -1,2 +1,2 @@
-
-.. mdinclude:: ../PyNEST/README.md
+```{include} ../PyNEST/README.md
+```
