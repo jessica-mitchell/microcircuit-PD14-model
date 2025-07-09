@@ -1,7 +1,7 @@
 # PyNEST implementation of the cortical microcircuit model
 
-[![www.python.org](https://img.shields.io/badge/python-3.6-blue.svg)](https://www.python.org)
-<a href="http://www.nest-simulator.org"> <img src="https://github.com/nest/nest-simulator/blob/master/doc/logos/nest-simulated.png" alt="NEST simulated" width="50"/></a>
+[![www.python.org](https://img.shields.io/badge/python-3.10-blue.svg)](https://www.python.org) 
+<a href="http://www.nest-simulator.org"> <img src="https://github.com/nest/nest-simulator/blob/master/doc/logos/nest-simulated.png" alt="NEST simulated" width="50"/></a> 
 
 ## Installing the python package `microcircuit`
 
@@ -46,6 +46,8 @@ After installation, the `microcircuit` python package can be imported in a pytho
 import microcircuit
 ```
 See [this example](https://microcircuit-pd14-model.readthedocs.io/en/latest/auto_examples/run_microcircuit.html) for a more detailed illustration of how the package can be used.
+
+See [this example](https://github.com/INM-6/microcircuit-PD14-model/blob/main/PyNEST/examples/run_microcircuit.py) for a more detailed illustration of how the package can be used.
 
 ## Software requirements
 
@@ -105,4 +107,4 @@ License
 
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-This project is licensed under GNU General Public License v2.0 or later.  For details, see [here](../LICENSES/GPL-2.0-or-later.txt).
+This project is licensed under GNU General Public License v2.0 or later.  For details, see [here](https://github.com/INM-6/microcircuit-PD14-model/blob/main/LICENSES/GPL-2.0-or-later.txt).
