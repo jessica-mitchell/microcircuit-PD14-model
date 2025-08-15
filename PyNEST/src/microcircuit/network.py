@@ -265,6 +265,20 @@ Storing simulation metadata to {self.sim_dict['data_path']}
                 self.net_dict["K_ext"],
             )
 
+            # check if all populations are supra-threshold with the changed DC input
+            if self.net_dict["bg_input_type"] == "dc":
+                I_rh = helpers.compute_rheo_base_current(
+                        self.net_dict["neuron_params"]["V_th"],
+                        self.net_dict["neuron_params"]["E_L"],
+                        self.net_dict["neuron_params"]["C_m"],
+                        self.net_dict["neuron_params"]["tau_m"],
+                    )
+                for i, pop in enumerate(self.net_dict["populations"]):
+                    if DC_amp[i] < I_rh:
+                        warnings.warn(
+                            "\nPopulation {} is sub-threshold with downscaled DC input amplitude and may not fire. ".format(pop)
+                        )          
+
         # store final parameters as class attributes
         self.weight_matrix_mean = PSC_matrix_mean
         self.weight_ext = PSC_ext
