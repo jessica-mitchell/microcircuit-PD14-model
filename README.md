@@ -2,6 +2,9 @@
 
 ## Overview
 
+[IMPLEMENTATION](docs/implementation.md)
+
+
 This [repository](https://github.com/INM-6/microcircuit-PD14-model) contains a detailed mathematical description and a reference implementation of the model of a cortical microcircuit proposed by [Potjans & Diesmann (2014)][1].
 The model describes the neuronal circuitry under ~1 mm$`^2`$ cortical surface.
 It comprises four cortical layers (L2/3, L4, L5, L6), each represented by a randomly connected network of excitatory and inhibitory point neurons.
