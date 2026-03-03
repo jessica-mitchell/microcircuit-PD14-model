@@ -38,6 +38,7 @@ A detailed mathematical, implementation-agnostic description of the model and it
 A PyNEST implementation in the form of a Python package is found [here](https://microcircuit-PD14-model.readthedocs.io/en/latest/pynest_implementation.html).
 
 ## Performance benchmarking
+[<img src="figures/benchmarking_icon.png" height="200"/>](docs/benchmarking/benchmarking.md)
 
 Performance benchmarking results and recommendations are found [here](docs/benchmarking/benchmarking.md).
 
