@@ -27,8 +27,8 @@ of studies and values are given in this [table](figures/performance_summary.md).
 | Simulation duration | Accuracy: $T_\text{model}=15\ \text{min}$, performance:  $T_\text{model}\ge 10\ \text{s}$|
 | Repeated simulations | Statistics across ten realizations of the model (RNG seeds)|
 | Spike recording | Accuracy: yes; performance: no|
-| Accuracy | Compute distributions of 1) single-neuron *firing rate* (FR), 2) *coefficient of variation* (CV) of the inter-spike intervals (ISI), and 3) short-term spike-count *correlation coefficients* (CC), and compare with reference data|
-| Performance | Measure real-time factor $q_\text{RTF}$ and the energy per synaptic event $E_\text{syn}$ (include all contributions necessary for running the simulations at the power outlet)|
+| Accuracy metrics | Compute distributions of 1) single-neuron *firing rate* (FR), 2) *coefficient of variation* (CV) of the inter-spike intervals (ISI), and 3) short-term spike-count *correlation coefficients* (CC), and compare with reference data|
+| Performance metrics | Measure real-time factor $q_\text{RTF}$ and the energy per synaptic event $E_\text{syn}$ (include all contributions necessary for running the simulations at the power outlet)|
 
 Checklist with recommended model and simulation parameters for the PD14 model. Table adapted from [(Senk et al., 2026)][1].
 
@@ -36,6 +36,7 @@ Checklist with recommended model and simulation parameters for the PD14 model. T
 
 [1]: <https://doi.org/10.1088/2634-4386/ae379a> "Senk et al. (2026). Constructive community race: full-density spiking neural network model drives neuromorphic computing. Neuromorphic Computing and Engineering 6(1):012001. doi:10.1088/2634-4386/ae379a" 
 [Senk et al. (2026). Constructive community race: full-density spiking neural network model drives neuromorphic computing. Neuromorphic Computing and Engineering 6(1):012001. doi:10.1088/2634-4386/ae379a](https://doi.org/10.1088/2634-4386/ae379a)
+
 
 
 
