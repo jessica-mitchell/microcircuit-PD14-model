@@ -346,14 +346,14 @@ It does not contain any information on specific numerical implementations.
 		\begin{equation}
 			f_{i} (t) = \sum_{x} \sum_{j} f_{ij} (t) = \sum_{x} \sum_{j} \hat{I}_{ij} s_{j}(t-d_{ij})
 		\end{equation}
-                of weighted spike trains with static synaptic weigths $\hat{I}_{ij}$, synaptic time constant $\tauS$, and spike transmission delays $d_{ij}$
+                of weighted spike trains with static synaptic weights $\hat{I}_{ij}$, synaptic time constant $\tauS$, and spike transmission delays $d_{ij}$
         \item[] (see App.\,\ref{sec:normal_form} for the normal form of the combined subthreshold neuron-synapse dynamics)	
 	\item solution of \eqref{eq:synaptic_current} for $\displaystyle f_{ij}(t)=\hat{I}_{ij}s_{j}(t)$ and $I_{ij}(t=0)=0$:
 		\begin{equation}
 			\text{PSC}_{ij}(t)=\hat{I}_{ij} \exp(-t/\tauS)\Theta(t)
 		\end{equation}
 		with Heaviside function $\Theta(\cdot)$
-	\item[$\curvearrowright$] (exponential decaying) posynaptic current triggered by a single presynaptic spike 
+	\item[$\curvearrowright$] (exponential decaying) postsynaptic current triggered by a single presynaptic spike 
 	\item solution of \eqref{eq:membrane_potential} for $I_i(t)=\text{PSC}_{ij}(t)$, $V_i(t=0)=0$, and $E_\text{L}=0$:
                            \begin{equation}
                              \text{PSP}_{ij}(t)=
@@ -868,7 +868,7 @@ $y\in\left\{\mathcal{E}_{23},\mathcal{E}_{4},\mathcal{E}_{5},\mathcal{E}_{6},\ma
 \item \label{remark:initial_conditions} The original model of \citet{Potjans14} uses \emph{population unspecific} normal distributions of initial membrane potentials.
 By default, the current implementation uses \emph{population specific} initial membrane potential distributions instead to speed up convergence to the stationary state.
 In the reference implementation provided \href{https://github.com/INM-6/microcircuit-PD14-model}{here}, the type of initial conditions can be set by the parameter \texttt{V0\_type} (\texttt{"optimized"} [default] or \texttt{"original"}).
-In \citep{Senk25_arxiv}, the population specific initial conditions are refered to as \emph{amended} initial conditions.
+In \citep{Senk25_arxiv}, the population specific initial conditions are referred to as \emph{amended} initial conditions.
   %%% 
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
