@@ -1,3 +1,4 @@
+import shutil
 import sys
 from pathlib import Path
 
@@ -23,6 +24,11 @@ sys.path.insert(0, str(Path('..', 'PyNEST/src').resolve()))
 # Add docs directory to path so we can import _scripts
 sys.path.insert(0, str(Path(__file__).parent.resolve()))
 
+shutil.copy(
+    Path(__file__).parent.parent / "PyNEST/examples/microcircuit_example.ipynb",
+    Path(__file__).parent / "microcircuit_example.ipynb",
+)
+
 try:
     # Import and run chart generator script
     from publications._scripts.generate_pd14_charts import main as charts_main
@@ -34,8 +40,7 @@ except Exception as e:
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = ["myst_parser",
-              # "m2r2",
+extensions = ["myst_nb",
               "sphinx_gallery.gen_gallery",
               "sphinx_design",
               "sphinx.ext.mathjax",
@@ -44,14 +49,15 @@ extensions = ["myst_parser",
               "sphinx.ext.intersphinx"]
 
 templates_path = ['_templates']
-exclude_patterns = []
+nb_execution_mode = "off"
+#nbsphinx_execute = "never"
+exclude_patterns = ["auto_examples/*.ipynb"]
 source_suffix = [".rst", ".md"]
 myst_enable_extensions = ["colon_fence",
                           "dollarmath"]
 bibtex_bibfiles = ["publications/publications.bib"]
 bibtex_reference_style = "author_year"
 bibtex_default_style = "unsrt"
-
 
 class SortByYearDescending(BaseSortingStyle):
     def sort(self, entries):
