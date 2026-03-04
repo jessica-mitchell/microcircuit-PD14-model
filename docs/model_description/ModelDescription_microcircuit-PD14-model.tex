@@ -147,23 +147,18 @@ It does not contain any information on specific numerical implementations.
   \hline 
   \textbf{Name} & \textbf{Elements} & \textbf{Size}\\
   \hline
-  cortical populations & LIF & $N_{x}$ \\
-  $x \in \{\mathcal{E}_{23},\mathcal{E}_{4},\mathcal{E}_{5},\mathcal{E}_{6},\mathcal{I}_{23},\mathcal{I}_{4},\mathcal{I}_{5},\mathcal{I}_{6}\}$ & & \\
+  local cortical populations\newline
+  $x \in \{\mathcal{E}_{23},\mathcal{E}_{4},\mathcal{E}_{5},\mathcal{E}_{6},\mathcal{I}_{23},\mathcal{I}_{4},\mathcal{I}_{5},\mathcal{I}_{6}\}$ & LIF & $N_{x}$ \\
   \hline 
-  total network $\mathcal{P} = \bigcup_{x} x$ & LIF & $N= \sum_{x} N_{x}$\\
+  total local cortical population $\mathcal{P} = \bigcup_{x} x$ & LIF & $N= \sum_{x} N_{x}$\\
   & & (see remark \ref{remark:network_scaling})\\
   \hline
-  cortico-cortical subpopulations $\mathcal{C}_{x}$ & population specific constant currents & $N_{x}$ \\
+  non-local cortical populations $\mathcal{C}_{x}$\newline (cortico-cortical inputs)  & constant currents (DC) & $N_{x}$ \\
   \hline
-  total population of cortico-cortical inputs & population specific constant currents & $N= \sum_{x} N_{x}$ \\
+  total population of non-local cortical neurons & constant currents (DC) & $N= \sum_{x} N_{x}$ \\
   $\mathcal{C} = \bigcup_{x} \mathcal{C}_x$ & & \\ 
-  \hline 
-  $\mathcal{P} = \bigcup_{x} x$ & LIF & $N= \sum_{x} N_{x}$\\
-  \hline 
-   $\mathcal{T}$ & realizations of Poisson point process & $N_{\mathcal{T}}$ \\
-   \hline
-   $\mathcal{C}=\bigcup_{x}\mathcal{C}_{x}$ & population specific currents & $N= \sum_{x} N_{x}$
-   \\
+  \hline
+  thalamic neurons $\mathcal{T}$ & realizations of Poisson point process & $N_{\mathcal{T}}$ \\
   \hline 
 \end{tabular}
 %%%%%%%%%%%%%%%%%%%
